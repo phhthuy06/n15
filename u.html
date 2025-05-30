@@ -1,0 +1,466 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8">
+  <title>Phim theo thể loại</title>
+  <style>
+    .list { margin-bottom: 40px; }
+    .item { margin-bottom: 10px; }
+  </style>
+</head>
+<body>
+  <!-- Menu điều hướng -->
+  <nav>
+    <a href="n.html?genre=hanhdong">Phim Hành Động</a> |
+    <a href="n.html?genre=tinhcam">Phim Tình Cảm</a>
+  </nav>
+
+  <!-- Danh sách phim Hành Động -->
+  <div class="list" data-genre="hanhdong">
+    <h2>Phim Hành Động</h2>
+    <div class="item" data-genre="hanhdong">
+      <img src="/image/2.jpg" alt="Fury Road" width="200">
+      <p><strong>Fury Road</strong>: Trong thế giới hậu tận thế khô cằn...</p>
+    </div>
+    <!-- Thêm nhiều phim hành động ở đây nếu muốn -->
+  </div>
+
+  <!-- Danh sách phim Tình Cảm -->
+  <div class="list" data-genre="tinhcam">
+    <h2>Phim Tình Cảm</h2>
+    <div class="item" data-genre="tinhcam">
+      <img src="/image/anhnen1.jpeg" alt="Phim TC" width="200">
+      <p><strong>Love Story</strong>: Một chuyện tình đầy cảm xúc...</p>
+    </div>
+    <!-- Thêm nhiều phim tình cảm ở đây nếu muốn -->
+  </div>
+
+  <!-- JavaScript lọc hiển thị -->
+  <script>
+    document.addEventListener("DOMContentLoaded", function () {
+      const params = new URLSearchParams(window.location.search);
+      const genre = params.get("genre");
+
+      const allGenreGroups = document.querySelectorAll(".list");
+
+      allGenreGroups.forEach(group => {
+        const groupGenre = group.getAttribute("data-genre");
+        group.style.display = (genre === groupGenre) ? "block" : "none";
+      });
+
+      // Nếu không có genre, ẩn tất cả
+      if (!genre) {
+        allGenreGroups.forEach(group => group.style.display = "none");
+      }
+    });
+  </script>
+</body>
+</html>
+
+
+<script>
+    const sliderIntervals = {};
+  
+    function initSlider(selector) {
+      const slider = document.querySelector(selector);
+      if (!slider) return;
+  
+      const list = slider.querySelectorAll('.list .item');
+      const thumbs = slider.querySelectorAll('.thumbnail .item');
+      const nextBtn = slider.querySelector('[class*="next"]');
+      const prevBtn = slider.querySelector('[class*="prev"]');
+  
+      let index = 0;
+  
+      function show() {
+        slider.querySelector('.list .item.active')?.classList.remove('active');
+        slider.querySelector('.thumbnail .item.active')?.classList.remove('active');
+        list[index].classList.add('active');
+        thumbs[index].classList.add('active');
+      }
+  
+      function next() {
+        index = (index + 1) % list.length;
+        show();
+      }
+  
+      function prev() {
+        index = (index - 1 + list.length) % list.length;
+        show();
+      }
+  
+      function resetInterval() {
+        clearInterval(sliderIntervals[selector]);
+        sliderIntervals[selector] = setInterval(next, 5000);
+      }
+  
+      nextBtn?.addEventListener('click', () => {
+        next();
+        resetInterval();
+      });
+  
+      prevBtn?.addEventListener('click', () => {
+        prev();
+        resetInterval();
+      });
+  
+      thumbs.forEach((thumb, i) => {
+        thumb.addEventListener('click', () => {
+          index = i;
+          show();
+          resetInterval();
+        });
+      });
+  
+      sliderIntervals[selector] = setInterval(next, 5000);
+      show();
+    }
+  
+    // Khởi tạo slider cho từng quốc gia
+    initSlider('.vn-slider');
+    initSlider('.jp-slider');
+    initSlider('.us-slider');
+    initSlider('.kr-slider');
+  
+    // Xử lý hiển thị theo quốc gia từ URL
+    const urlParams = new URLSearchParams(window.location.search);
+    const country = urlParams.get('country');
+    if (country) {
+      document.querySelectorAll('.genre-section').forEach(section => {
+        section.classList.remove('active');
+      });
+      const target = document.querySelector(`.${country}-slider`);
+      if (target) target.classList.add('active');
+    } else {
+      document.querySelector('.vn-slider')?.classList.add('active'); // mặc định là VN
+    }
+  
+    // ====== TÌM KIẾM ======
+    const searchIcon = document.getElementById('toggleSearch');
+    const searchInput = document.getElementById('searchInput');
+    const searchResult = document.getElementById('searchResult');
+  
+    searchIcon.addEventListener('click', () => {
+      searchInput.style.display = (searchInput.style.display === 'none' || !searchInput.style.display) ? 'inline-block' : 'none';
+      if (searchInput.style.display !== 'none') {
+        searchInput.focus();
+      }
+    });
+  
+    searchInput.addEventListener('keypress', function (e) {
+      if (e.key === 'Enter') {
+        const keyword = searchInput.value.trim().toLowerCase();
+        let found = false;
+  
+        document.querySelectorAll('.genre-section').forEach(section => {
+          const items = section.querySelectorAll('.list .item');
+          items.forEach((item, idx) => {
+            const title = item.querySelector('h2')?.textContent.toLowerCase() || '';
+            const desc = item.querySelector('p:nth-of-type(2)')?.textContent.toLowerCase() || '';
+  
+            if (title.includes(keyword) || desc.includes(keyword)) {
+              document.querySelectorAll('.genre-section').forEach(s => s.classList.remove('active'));
+              section.classList.add('active');
+  
+              section.querySelector('.list .item.active')?.classList.remove('active');
+              section.querySelector('.thumbnail .item.active')?.classList.remove('active');
+              item.classList.add('active');
+              section.querySelectorAll('.thumbnail .item')[idx]?.classList.add('active');
+  
+              const className = section.classList[1]; // ví dụ: 'vn-slider'
+              clearInterval(sliderIntervals[`.${className}`]);
+  
+              found = true;
+            }
+          });
+        });
+  
+        searchResult.textContent = found ? '' : 'Không tìm thấy phim nào.';
+      }
+    });
+  </script>
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap');
+    
+    body {
+      font-family: Poppins, sans-serif;
+      margin: 0;
+      background-color: #010101;
+      color: #eee;
+    }
+    
+    svg {
+      width: 25px;
+    }
+    
+    header {
+      width: 1200px;
+      max-width: 90%;
+      margin: auto;
+      display: grid;
+      grid-template-columns: 50px 1fr 50px;
+      grid-template-rows: 50px;
+      justify-content: center;
+      align-items: center;
+      position: relative;
+      z-index: 100;
+    }
+    
+    header .logo {
+      font-weight: bold;
+    }
+    
+    header .menu {
+      padding: 0;
+      margin: 0;
+      list-style: none;
+      display: flex;
+      justify-content: center;
+      gap: 20px;
+      font-weight: 500;
+    }
+    
+    /* =================== SLIDER =================== */
+    .slider {
+      height: 100vh;
+      margin-top: -50px;
+      position: relative;
+    }
+    .slider .list .item {
+      position: absolute;
+      inset: 0;
+      overflow: hidden;
+      opacity: 0;
+      transition: 0.5s;
+    }
+    .slider .list .item img {
+      width: 100%;
+      height: 100%;
+      object-fit: contain;
+    }
+    .slider .list .item::after {
+      content: '';
+      width: 100%;
+      height: 100%;
+      position: absolute;
+      left: 0;
+      bottom: 0;
+      background-image: linear-gradient(to top, #000 40%, transparent);
+    }
+    .slider .list .item .content {
+      position: absolute;
+      left: 10%;
+      top: 20%;
+      width: 500px;
+      max-width: 80%;
+      z-index: 1;
+    }
+    .slider .list .item .content p:nth-child(1) {
+      text-transform: uppercase;
+      letter-spacing: 10px;
+    }
+    .slider .list .item .content h2 {
+      font-size: 100px;
+      margin: 0;
+    }
+    .slider .list .item.active {
+      opacity: 1;
+      z-index: 10;
+    }
+    @keyframes showContent {
+      to {
+        transform: translateY(0);
+        filter: blur(0);
+        opacity: 1;
+      }
+    }
+    .slider .list .item.active p:nth-child(1),
+    .slider .list .item.active h2,
+    .slider .list .item.active p:nth-child(3) {
+      transform: translateY(30px);
+      filter: blur(20px);
+      opacity: 0;
+      animation: showContent 0.5s 0.7s ease-in-out 1 forwards;
+    }
+    .slider .list .item.active h2 {
+      animation-delay: 1s;
+      font-size: 60px;
+    }
+    .slider .list .item.active p:nth-child(3) {
+      animation-duration: 1.3s;
+    }
+    
+    /* =================== THUMBNAIL + ARROWS (4 QUỐC GIA) =================== */
+    .vietnam-arrows, .hanquoc-arrows, .my-arrows, .trungquoc-arrows {
+      position: absolute;
+      top: 30%;
+      right: 50px;
+      z-index: 100;
+    }
+    .vietnam-arrows button, .hanquoc-arrows button, .my-arrows button, .trungquoc-arrows button {
+      background-color: #eee5;
+      border: none;
+      width: 40px;
+      height: 40px;
+      border-radius: 5px;
+      font-size: x-large;
+      color: #eee;
+      transition: 0.5s;
+    }
+    .vietnam-arrows button:hover, .hanquoc-arrows button:hover,
+    .my-arrows button:hover, .trungquoc-arrows button:hover {
+      background-color: #eee;
+      color: black;
+    }
+    
+    .vietnam-thumbnail, .hanquoc-thumbnail, .my-thumbnail, .trungquoc-thumbnail {
+      position: absolute;
+      bottom: 50px;
+      z-index: 11;
+      display: flex;
+      gap: 10px;
+      width: 100%;
+      height: 250px;
+      padding: 0 50px;
+      box-sizing: border-box;
+      overflow: auto;
+      justify-content: center;
+    }
+    .vietnam-thumbnail::-webkit-scrollbar,
+    .hanquoc-thumbnail::-webkit-scrollbar,
+    .my-thumbnail::-webkit-scrollbar,
+    .trungquoc-thumbnail::-webkit-scrollbar {
+      width: 0;
+    }
+    .vietnam-thumbnail .item, .hanquoc-thumbnail .item,
+    .my-thumbnail .item, .trungquoc-thumbnail .item {
+      width: 150px;
+      height: 220px;
+      filter: brightness(0.5);
+      transition: 0.5s;
+      flex-shrink: 0;
+    }
+    .vietnam-thumbnail .item img, .hanquoc-thumbnail .item img,
+    .my-thumbnail .item img, .trungquoc-thumbnail .item img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      border-radius: 10px;
+    }
+    .vietnam-thumbnail .item.active, .hanquoc-thumbnail .item.active,
+    .my-thumbnail .item.active, .trungquoc-thumbnail .item.active {
+      filter: brightness(1.5);
+    }
+    .vietnam-thumbnail .item .content, .hanquoc-thumbnail .item .content,
+    .my-thumbnail .item .content, .trungquoc-thumbnail .item .content {
+      position: absolute;
+      inset: auto 10px 10px 10px;
+    }
+    
+    /* =================== MENU =================== */
+    .menu-list {
+      display: flex;
+      list-style: none;
+      padding: 0;
+      margin: 0;
+    }
+    .menu-list-item {
+      position: relative;
+      margin-right: 20px;
+    }
+    .menu-list-item a {
+      text-decoration: none;
+      color: white;
+      font-weight: bold;
+      padding: 10px 12px;
+      display: block;
+    }
+    .menu-list-item.active a {
+      color: #4dbf00;
+    }
+    .sub-menu {
+      display: none;
+      position: absolute;
+      top: 100%;
+      left: 0;
+      background: #222;
+      padding: 15px;
+      list-style: none;
+      min-width: 180px;
+      border-radius: 6px;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.3);
+      z-index: 1000;
+    }
+    .sub-menu li {
+      margin: 5px 0;
+    }
+    .sub-menu li a {
+      color: white;
+      font-weight: normal;
+      font-size: 15px;
+      transition: 0.2s;
+    }
+    .sub-menu li a:hover {
+      color: #4dbf00;
+    }
+    .menu-list-item.dropdown:hover .sub-menu {
+      display: block;
+    }
+    
+    /* =================== GENRE SECTION =================== */
+    .genre-section {
+      display: none;
+    }
+    .genre-section.active {
+      display: block;
+    }
+    
+    /* =================== SEARCH =================== */
+    .search-wrapper {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      margin: 20px;
+    }
+    #searchInput {
+      padding: 6px 10px;
+      font-size: 14px;
+      border: 1px solid #aaa;
+      border-radius: 4px;
+      background-color: #333;
+      color: white;
+    }
+    #searchButton {
+      padding: 6px 12px;
+      font-size: 14px;
+      background-color: #007bff;
+      color: white;
+      border: none;
+      border-radius: 4px;
+      cursor: pointer;
+    }
+    #searchButton:hover {
+      background-color: #0056b3;
+    }
+    
+    /* =================== RESPONSIVE =================== */
+    @media screen and (max-width: 678px) {
+      .slider .list .item .content h2 {
+        font-size: 60px;
+      }
+      .vietnam-thumbnail,
+      .hanquoc-thumbnail,
+      .my-thumbnail,
+      .trungquoc-thumbnail {
+        justify-content: start;
+        height: 200px;
+      }
+      .vietnam-thumbnail .item,
+      .hanquoc-thumbnail .item,
+      .my-thumbnail .item,
+      .trungquoc-thumbnail .item {
+        width: 120px;
+        height: 180px;
+      }
+    }
+    </style>
