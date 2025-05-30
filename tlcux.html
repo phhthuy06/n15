@@ -1,0 +1,641 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Thể loại</title>
+    <link rel="stylesheet" href="theloai.css">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700;900&family=Sen:wght@400;700;800&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css">
+</head>
+<body>
+ <!--logo-->
+ <div class="navbar">
+    <div class="navbar-container">
+        <div class="logo-container">
+            <h1 class="logo">flakes</h1>
+        </div>
+        <!--thanh menu-->
+        <div class="menu-container">
+          <ul class="menu-list">
+            <li class="menu-list-item active"><a href="index.html">Trang chủ</a></li>          
+            <li class="menu-list-item dropdown">
+              <a href="#">Thể loại</a>
+              <ul class="sub-menu">
+                <li><a href="theloai.html?genre=hanhdong">Hành Động</a></li>
+                <li><a href="theloai.html?genre=tinhcam">Tình cảm</a></li>
+                <li><a href="theloai.html?genre=haihuoc">Hài Hước</a></li>
+                <li><a href="theloai.html?genre=anime">Anime</a></li>
+              </ul>
+            </li>
+        
+            <li class="menu-list-item dropdown">
+              <a href="#">Quốc Gia</a>
+              <ul class="sub-menu">
+                <li><a href="quocgia.html?country=vietnam">Việt Nam</a></li>
+                <li><a href="quocgia.html?country=hanquoc">Hàn Quốc</a></li>
+                <li><a href="quocgia.html?country=my">Mỹ</a></li>
+                <li><a href="quocgia.html?country=trungquoc">Trung Quốc</a></li>
+              </ul>
+            </li>
+        
+            <li class="menu-list-item"><a href="chieuphim.html">Phim chiếu rạp</a></li>
+            <li class="menu-list-item"><a href="lienhe.html">Liên hệ</a></li>
+          </ul>
+        </div>
+        <!--thanh search-->
+        <div class="search-box">
+          <form action="" class="search" id="search-form">
+            <span class="action-l"><i class="ri-search-line"></i></span>
+            <input type="search" placeholder="search movie" id="search-input">
+            <button type="submit" id="button-addon2"> search</button>           
+          </form>
+        </div>
+        <!--profile-->
+        <div class="profile-container">
+            <img class="profile-picture" src="img/profile.jpg" alt="">
+            <div class="profile-text-container">
+                <span class="profile-text">Profile</span>
+                <i class="fas fa-caret-down"></i>
+            </div>
+            <!--sang/toi-->
+            <div class="toggle">
+                <i class="fas fa-moon toggle-icon"></i>
+                <i class="fas fa-sun toggle-icon"></i>
+                <div class="toggle-ball"></div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="sidebar">
+    <i class="left-menu-icon fas fa-search"></i>
+    <i class="left-menu-icon fas fa-home"></i>
+    <i class="left-menu-icon fas fa-users"></i>
+    <i class="left-menu-icon fas fa-bookmark"></i>
+    <i class="left-menu-icon fas fa-tv"></i>
+    <i class="left-menu-icon fas fa-hourglass-start"></i>
+    <i class="left-menu-icon fas fa-shopping-cart"></i>
+</div>
+<!--container-->
+<div class="container">
+    <div class="content-container">
+                             <!--phim hdong-->
+        <div class="genre-group" data-genre="hanhdong">
+           <h2>PHIM HÀNH ĐỘNG</h2>
+                                  <div class="movie-list-item" data-genre="hanhdong">
+                                     <a href="theloai.html?genre=hanhdong" style="text-decoration: none; color: inherit;">
+                                        <img class="movie-list-item-img" src="/image/2.jpg" alt="Fury Road">
+                                        <span class="movie-list-item-title">Fury Road</span>
+                                        <p class="movie-list-item-desc">Trong thế giới hậu tận thế khô cằn, Max cùng nữ chiến binh Furiosa chạy trốn khỏi bạo chúa Immortan Joe.</p>
+                                        <button class="movie-list-item-button">Watch</button>
+                                     </a>
+                                   </div>
+             
+              <div class="movie-list-item" data-genre="hanhdong">         
+                <a href="theloai.html?genre=hanhdong" style="text-decoration: none; color: inherit;">           
+                     <img class="movie-list-item-img" src="/image/RUN..webp" alt="Run – Trốn Chạy">
+                     <span class="movie-list-item-title">Run – Trốn Chạy</span>
+                     <p class="movie-list-item-desc">Một cô gái bị liệt, sống cùng mẹ trong căn nhà biệt lập. Khi lớn lên, cô bắt đầu nghi ngờ mẹ mình đang che giấu bí mật khủng khiếp và cố tình kiểm soát cô. Một hành trình trốn chạy nghẹt thở bắt đầu.</p>
+                     <button class="movie-list-item-button">Watch</button>
+                </a>
+              </div>
+                
+              <div class="movie-list-item" data-genre="hanhdong">
+                     <a href="n.html?genre=hanhdong" style="text-decoration: none; color: inherit;">
+                     <img class="movie-list-item-img" src="/image/3.jpg" alt="Bán Đảo">
+                     <span class="movie-list-item-title">Bán Đảo</span>
+                     <p class="movie-list-item-desc">Bốn năm sau đại dịch zombie, một cựu quân nhân quay lại Hàn Quốc để làm nhiệm vụ. Anh phải đối mặt không chỉ với xác sống mà còn với con người biến chất trong thế giới hậu tận thế tàn bạo.</p>
+                     <button class="movie-list-item-button">Watch</button>
+                </a>
+                </div>
+               
+                <div class="movie-list-item" data-genre="hanhdong">
+                     <a href="n.html?genre=hanhdong" style="text-decoration: none; color: inherit;">
+                     <img class="movie-list-item-img" src="/image/4.jpeg" alt="Se7en">
+                     <span class="movie-list-item-title">Se7en </span>
+                     <p class="movie-list-item-desc">Hai thám tử truy đuổi kẻ sát nhân dùng 7 tội lỗi chết người làm cảm hứng cho những vụ giết người ghê rợn – cho đến một cái kết sốc tận óc.</p>
+                     <button class="movie-list-item-button">Watch</button>
+                </a>
+                </div>
+                
+                <div class="movie-list-item" data-genre="hanhdong">
+                     <a href="n.html?genre=hanhdong" style="text-decoration: none; color: inherit;">
+                     <img class="movie-list-item-img" src="/image/5.jpeg" alt="Điệp Vụ Boston">
+                     <span class="movie-list-item-title">Điệp Vụ Boston</span>
+                     <p class="movie-list-item-desc">Thanh tra Ma Seok-do trở lại điều tra một vụ án ma túy quốc tế. Khi phát hiện đường dây liên quan đến cảnh sát biến chất và sát thủ người nước ngoài, anh bước vào cuộc đối đầu nguy hiểm hơn bao giờ hết.</p>
+                     <button class="movie-list-item-button">Watch</button>
+                </a>
+                </div>
+              
+                <div class="movie-list-item" data-genre="hanhdong">
+                     <a href="n.html?genre=hanhdong" style="text-decoration: none; color: inherit;">
+                     <img class="movie-list-item-img" src="/image/6.jpef.jpeg" alt="Unlocked">
+                     <span class="movie-list-item-title">Unlocked </span>
+                     <p class="movie-list-item-desc">Trong tương lai hậu tận thế, một công ty nghiên cứu trí tuệ nhân tạo tạo ra bản sao chiến binh huyền thoại Jung_E để giành chiến thắng trong cuộc chiến kéo dài. Nhưng đằng sau dự án là những bí mật đạo đức và cảm xúc sâu sắc liên quan đến gia đình và bản ngã con người.</p>
+                     <button class="movie-list-item-button">Watch</button>
+                </a>
+                </div>
+               
+                <div class="movie-list-item"data-genre="hanhdong">
+                     <a href="n.html?genre=hanhdong" style="text-decoration: none; color: inherit;">
+                     <img class="movie-list-item-img" src="/image/hd.jpeg" alt="Vùng đất câm lặng">
+                     <span class="movie-list-item-title">Vùng đất câm lặng</span>
+                     <p class="movie-list-item-desc">Trong thế giới bị sinh vật săn mồi siêu thính giác thống trị, một gia đình buộc phải sống trong im lặng tuyệt đối để sinh tồn. Chỉ một tiếng động nhỏ cũng có thể dẫn đến cái chết.</p>
+                     <button class="movie-list-item-button">Watch</button>
+                </a>
+            </div>
+            <div class="movie-list-item"data-genre="hanhdong">
+                <a href="n.html?genre=hanhdong" style="text-decoration: none; color: inherit;">
+                <img class="movie-list-item-img" src="/image/hd1.jpeg" alt="Dạ quỷ">
+                <span class="movie-list-item-title">Dạ quỷ</span>
+                <p class="movie-list-item-desc">oàng tử Lee Chung trở về Joseon và phải chiến đấu chống lại lũ quỷ khát máu đang đe dọa vương quốc.</p>
+                <button class="movie-list-item-button">Watch</button>
+           </a>
+       </div>
+               <div class="movie-list-item"data-genre="hanhdong">
+        <a href="n.html?genre=hanhdong" style="text-decoration: none; color: inherit;">
+        <img class="movie-list-item-img" src="/image/hd2.webp" alt="Đường hầm">
+        <span class="movie-list-item-title">Đường hầm</span>
+        <p class="movie-list-item-desc">Lee Jung-soo, một nhân viên bán ô tô bị mắc kẹt trong đường hầm sập khi đang trên đường về nhà. Với chỉ hai chai nước và một chiếc bánh sinh nhật, anh phải chiến đấu để sinh tồn trong khi đội cứu hộ nỗ lực giải cứu anh giữa áp lực dư luận và truyền thông.</p>
+        <button class="movie-list-item-button">Watch</button>
+   </a>
+          </div>
+               <div class="movie-list-item"data-genre="hanhdong">
+        <a href="n.html?genre=hanhdong" style="text-decoration: none; color: inherit;">
+        <img class="movie-list-item-img" src="/image/hd3.png" alt="Võ sĩ giác đấu">
+        <span class="movie-list-item-title">Võ sĩ giác đấu</span>
+        <p class="movie-list-item-desc">Võ Sĩ Giác Đấu kể về Maximus – vị tướng La Mã bị phản bội, trở thành nô lệ và chiến đấu trong đấu trường để trả thù kẻ sát hại gia đình mình.</p>
+         <button class="movie-list-item-button">Watch</button>
+         </a>
+         </div>
+                <div class="movie-list-item"data-genre="hanhdong">
+    <a href="n.html?genre=hanhdong" style="text-decoration: none; color: inherit;">
+    <img class="movie-list-item-img" src="/image/hd4.jpeg" alt="Lật mặt: Ba chàng khuyết">
+    <span class="movie-list-item-title">Lật mặt: Ba chàng khuyết</span>
+    <p class="movie-list-item-desc">Ba người bạn khuyết tật trên hành trình tìm mẹ, vô tình bị cuốn vào đường dây buôn người và phải chiến đấu để sinh tồn và bảo vệ nhau.</p>
+    <button class="movie-list-item-button">Watch</button>
+</a>
+        </div>
+                <div class="movie-list-item"data-genre="hanhdong">
+    <a href="n.html?genre=hanhdong" style="text-decoration: none; color: inherit;">
+    <img class="movie-list-item-img" src="/image/hd5.jpeg" alt="Kế Hoạch Săn Sói">
+    <span class="movie-list-item-title">Kế Hoạch Săn Sói</span>
+    <p class="movie-list-item-desc">nhiệm vụ mật của lực lượng đặc nhiệm nhằm triệt phá đường dây tội phạm xuyên quốc gia, nơi các bí mật đen tối dần được phơi bày.</p>
+    <button class="movie-list-item-button">Watch</button>
+</a>
+          </div>
+                <div class="movie-list-item"data-genre="hanhdong">
+    <a href="n.html?genre=hanhdong" style="text-decoration: none; color: inherit;">
+    <img class="movie-list-item-img" src="/image/hd6.jpeg" alt="Mickey 17">
+    <span class="movie-list-item-title">Mickey 17</span>
+    <p class="movie-list-item-desc">một nhân bản trong sứ mệnh không gian, bị thay thế sau khi mất tích và phải đối đầu với chính phiên bản mới của mình để sinh tồn.</p>
+    <button class="movie-list-item-button">Watch</button>
+</a>
+          </div>
+          <div class="movie-list-item"data-genre="hanhdong">
+    <a href="n.html?genre=hanhdong" style="text-decoration: none; color: inherit;">
+    <img class="movie-list-item-img" src="/image/hd00.jpeg" alt="Hai Phượng">
+    <span class="movie-list-item-title">Hai Phượng</span>
+    <p class="movie-list-item-desc">Hai Phượng kể về một người mẹ đơn thân từng có quá khứ giang hồ, phải lao vào hành trình nghẹt thở truy đuổi bọn buôn người để cứu con gái bị bắt cóc.</p>
+    <button class="movie-list-item-button">Watch</button>
+          </a> </div>
+         <div class="movie-list-item"data-genre="hanhdong">
+    <a href="theloai.html?genre=hanhdong" style="text-decoration: none; color: inherit;">
+    <img class="movie-list-item-img" src="/image/hd7.webp" alt="Độc Chiến 2">
+    <span class="movie-list-item-title">Độc Chiến 2</span>
+    <p class="movie-list-item-desc"> Độc Chiến 2 (Believer 2) tiếp tục hành trình của thám tử Won-ho trong cuộc truy lùng ông trùm ma túy bí ẩn Mr. Lee, khi những bí mật mới và âm mưu nguy hiểm dần hé lộ.</p>
+    <button class="movie-list-item-button">Watch</button>
+          </a> </div>
+         <div class="movie-list-item"data-genre="hanhdong">
+    <a href="theloai.html?genre=hanhdong" style="text-decoration: none; color: inherit;">
+    <img class="movie-list-item-img" src="/image/hd0.jpeg" alt="Con tàu Chiến Thắng">
+    <span class="movie-list-item-title">Con tàu Chiến Thắng</span>
+    <p class="movie-list-item-desc">hóm thu gom rác vũ trụ phát hiện một bé gái người máy mang vũ khí nguy hiểm, từ đó bị cuốn vào cuộc chiến giữa lòng tham và chính nghĩa.</p>
+    <button class="movie-list-item-button">Watch</button>
+          </a> </div>
+         <div class="movie-list-item"data-genre="hanhdong">
+          <a href="theloai.html?genre=hanhdong" style="text-decoration: none; color: inherit;">
+    <img class="movie-list-item-img" src="/image/hd9.jpeg" alt="Tenet">
+    <span class="movie-list-item-title">Tenet</span>
+    <p class="movie-list-item-desc">Một đặc vụ được giao nhiệm vụ ngăn chặn chiến tranh thế giới bằng công nghệ "đảo ngược thời gian", khi anh dấn thân vào cuộc chiến vượt ngoài mọi quy luật vật lý.</p>
+    <button class="movie-list-item-button">Watch</button>
+          </a> </div>
+             <div class="movie-list-item"data-genre="hanhdong">
+            <a href="theloai.html?genre=hanhdong" style="text-decoration: none; color: inherit;">
+            <img class="movie-list-item-img" src="/image/hd10.jpeg" alt="Maika">
+            <span class="movie-list-item-title">Maika</span>
+            <p class="movie-list-item-desc"> ùng – cậu bé vừa mất mẹ, tình cờ gặp Maika – cô bé ngoài hành tinh có siêu năng lực. Cùng người bạn Cu Béo, họ bước vào hành trình giúp Maika trở về hành tinh mẹ, đối đầu với kẻ xấu và khám phá ý nghĩa của tình bạn, gia đình và lòng dũng cảm.</p>
+            <button class="movie-list-item-button">Watch</button>
+                  </a> </div>
+                            </div>
+        </div>
+    <!--tinhcam-->
+    <div class="genre-group" data-genre="tinhcam">
+        <h2>PHIM TÌNH CẢM</h2>
+    <div class="movie-list"> 
+        
+        <div class="movie-list-item"data-genre="tinhcam">
+            <a href="theloai.html?genre=tinhcam" style="text-decoration: none; color: inherit;">
+            <img class="movie-list-item-img" src="/image/image/1z1.webp" alt="Me Before You ">
+            <span class="movie-list-item-title">Me Before You </span>
+            <p class="movie-list-item-desc">Lou – cô gái lạc quan – chăm sóc Will, chàng trai bị liệt và mất niềm tin vào cuộc sống. Tình yêu giữa họ nảy nở, nhưng đi kèm là một quyết định khiến trái tim tan vỡ.</p>
+            <button class="movie-list-item-button">Watch</button>
+        </a>       
+        </div>
+
+        <div class="movie-list-item"data-genre="tinhcam"> 
+            <a href="theloai.html?genre=tinhcam" style="text-decoration: none; color: inherit;">      
+                <img class="movie-list-item-img" src="/image/image/4z4.jpeg" alt="Casablanca">
+                <span class="movie-list-item-title">Casablanca</span>
+                <p class="movie-list-item-desc">Rick, một chủ quán bar ở Casablanca, phải đối mặt với tình cảm xưa cũ khi người yêu cũ Ilsa trở lại với chồng, một nhà cách mạng, trong lúc chiến tranh thế giới thứ hai đang diễn ra. Rick phải quyết định giữa tình yêu và lòng trung thành với lý tưởng.</p>
+                <button class="movie-list-item-button">Watch</button>
+         </a>       
+        </div>
+    
+        <div class="movie-list-item"data-genre="tinhcam">     
+            <a href="theloai.html?genre=tinhcam" style="text-decoration: none; color: inherit;"> 
+            <img class="movie-list-item-img" src="/image/image/3x3.jpeg" alt="Titanic">
+            <span class="movie-list-item-title">Titanic</span>
+            <p class="movie-list-item-desc">Jack và Rose, hai con người đến từ hai thế giới khác nhau, gặp gỡ trên tàu Titanic trong chuyến hành trình định mệnh. Mối tình lãng mạn giữa họ vượt qua mọi rào cản xã hội, nhưng khi tàu gặp nạn, họ phải đối mặt với sự sống còn và mất mát khôn nguôi.</p>
+            <button class="movie-list-item-button">Watch</button>
+            </a> </div>
+            <div class="movie-list-item"data-genre="tinhcam"> 
+                <a href="theloai.html?genre=tinhcam" style="text-decoration: none; color: inherit;">
+                    <img class="movie-list-item-img" src="/image/5z5.jpeg" alt="Shakespeare In Love">
+                    <span class="movie-list-item-title">Shakespeare In Love</span>
+                    <p class="movie-list-item-desc">William Shakespeare gặp và yêu Viola, một cô gái mơ ước trở thành diễn viên. Khi viết vở kịch Romeo và Juliet, mối tình của họ trở thành nguồn cảm hứng, nhưng cũng đầy trắc trở và đau đớn vì những rào cản xã hội và tình cảm.</p>
+                    <button class="movie-list-item-button">Watch</button>
+                </a>  </div>
+                <div class="movie-list-item"data-genre="tinhcam"> 
+                    <a href="theloai.html?genre=tinhcam" style="text-decoration: none; color: inherit;">    
+                    <img class="movie-list-item-img" src="/image/6z6.jpeg" alt="Moulin Rouge">
+                    <span class="movie-list-item-title">Moulin Rouge</span>
+                    <p class="movie-list-item-desc">Christian yêu Satine, ngôi sao Moulin Rouge, nhưng tình yêu của họ bị thử thách bởi những bí mật và mưu đồ trong thế giới nghệ thuật.</p>
+                    <button class="movie-list-item-button">Watch</button>
+                    </a>    </div>
+    
+                    <div class="movie-list-item"data-genre="tinhcam">   
+                        <a href="theloai.html?genre=tinhcam" style="text-decoration: none; color: inherit;">              
+                 <img class="movie-list-item-img" src="/image/7z7.jpeg" alt="La La land">
+                    <span class="movie-list-item-title">La La land</span>
+                    <p class="movie-list-item-desc">Mia – cô diễn viên trẻ – và Sebastian – chàng nhạc công jazz – gặp nhau ở Los Angeles khi cả hai đang theo đuổi ước mơ nghệ thuật. Họ yêu nhau say đắm, nhưng hành trình chạm tới thành công dần kéo họ xa nhau.</p>
+                    <button class="movie-list-item-button">Watch</button>
+                    </a>    </div>
+                    <div class="movie-list-item"data-genre="tinhcam">  
+                        <a href="theloai.html?genre=tinhcam" style="text-decoration: none; color: inherit;">
+                    <img class="movie-list-item-img" src="/image/8z8.jpeg" alt="Out of Africa">
+                    <span class="movie-list-item-title">Out of Africa</span>
+                    <p class="movie-list-item-desc">Tự do là điều anh lựa chọn. Và em – đã lựa chọn yêu anh trong lặng lẽ</p>
+                    <button class="movie-list-item-button">Watch</button>
+                   </a>   </div>
+                   <div class="movie-list-item"data-genre="tinhcam">  
+                    <a href="theloai.html?genre=tinhcam" style="text-decoration: none; color: inherit;">
+                    <img class="movie-list-item-img" src="/image/tc1.jpeg" alt="Chúng Ta Của Sau Này">
+                    <span class="movie-list-item-title">Chúng Ta Của Sau Này</span>
+                    <p class="movie-list-item-desc">Đôi trẻ yêu nhau trong gian khó, nhưng lạc mất nhau theo thời gian và chỉ gặp lại khi đã không còn là của nhau.</p>
+                    <button class="movie-list-item-button">Watch</button>
+                   </a>   </div>
+                   <div class="movie-list-item"data-genre="tinhcam">  
+                    <a href="theloai.html?genre=tinhcam" style="text-decoration: none; color: inherit;">
+                    <img class="movie-list-item-img" src="/image/tc2.jpeg" alt="Cô gái đến từ hôm qua">
+                    <span class="movie-list-item-title">Cô gái đến từ hôm qua</span>
+                    <p class="movie-list-item-desc">Cô Gái Đến Từ Hôm Qua kể về Thư – cậu học trò nhận ra cô bạn mới chính là người con gái trong ký ức tuổi thơ của mình.</p>
+                    <button class="movie-list-item-button">Watch</button>
+                   </a>   </div>
+                   <div class="movie-list-item"data-genre="tinhcam">  
+                    <a href="theloai.html?genre=tinhcam" style="text-decoration: none; color: inherit;">
+                    <img class="movie-list-item-img" src="/image/tc3.webp" alt="Giai điệu tình yêu">
+                    <span class="movie-list-item-title">Giai điệu tình yêu</span>
+                    <p class="movie-list-item-desc">Giai Điệu Tình Yêu kể về đôi trẻ kết nối qua radio, nhưng tình yêu của họ luôn bị thử thách bởi khoảng cách và thời gian.</p>
+                    <button class="movie-list-item-button">Watch</button>
+                   </a>   </div>
+                   <div class="movie-list-item"data-genre="tinhcam">  
+                    <a href="theloai.html?genre=tinhcam" style="text-decoration: none; color: inherit;">
+                    <img class="movie-list-item-img" src="/image/tc4.jpeg" alt="Đã đến lúc">
+                    <span class="movie-list-item-title"> Đã đến lúc</span>
+                    <p class="movie-list-item-desc">Tim Lake, một chàng trai phát hiện mình có khả năng du hành thời gian. Anh sử dụng năng lực này để tìm kiếm tình yêu và hạnh phúc, nhưng dần nhận ra rằng không thể tránh khỏi những mất mát và thử thách trong cuộc sống.</p>
+                    <button class="movie-list-item-button">Watch</button>
+                   </a>   </div>
+                   <div class="movie-list-item"data-genre="tinhcam"> 
+                    <a href="theloai.html?genre=tinhcam" style="text-decoration: none; color: inherit;"> 
+                    <img class="movie-list-item-img" src="/image/tc.jpeg" alt="Kiêu hãnh và định kiến">
+                    <span class="movie-list-item-title">Kiêu hãnh và định kiến</span>
+                    <p class="movie-list-item-desc">Tự do là điều anh lựa chọn. Và em – đã lựa chọn yêu anh trong lặng lẽ</p>
+                    <button class="movie-list-item-button">Watch</button>
+                   </a>   </div>
+                   <div class="movie-list-item"data-genre="tinhcam">  
+                    <a href="theloai.html?genre=tinhcam" style="text-decoration: none; color: inherit;">
+                    <img class="movie-list-item-img" src="/image/tc5.jpeg" alt="Vì sao vụt sáng">
+                    <span class="movie-list-item-title">Vì sao vụt sáng</span>
+                    <p class="movie-list-item-desc">Chuyện tình giữa ca sĩ nổi tiếng Jackson Maine và Ally – cô gái có giọng hát thiên phú. Khi Ally vụt sáng thành sao, tình yêu của họ dần bị thử thách bởi danh tiếng, áp lực và những tổn thương cá nhân.</p>
+                    <button class="movie-list-item-button">Watch</button>
+                   </a>   </div>
+                   <div class="movie-list-item"data-genre="tinhcam">  
+                    <a href="theloai.html?genre=tinhcam" style="text-decoration: none; color: inherit;">
+                    <img class="movie-list-item-img" src="/image/tc6.jpeg" alt="Her">
+                    <span class="movie-list-item-title">Her</span>
+                    <p class="movie-list-item-desc">Theodore – người đàn ông cô đơn, nảy sinh tình cảm với Samantha – trí tuệ nhân tạo có giọng nói quyến rũ và trí tuệ siêu việt, từ đó khám phá ý nghĩa của tình yêu trong thời đại công nghệ.</p>
+                    <button class="movie-list-item-button">Watch</button>
+                   </a>   </div>
+                   <div class="movie-list-item"data-genre="tinhcam">  
+                    <a href="theloai.html?genre=tinhcam" style="text-decoration: none; color: inherit;">
+                    <img class="movie-list-item-img" src="/image/tc7.jpeg" alt="Gọi Em Bằng Tên Anh">
+                    <span class="movie-list-item-title">Gọi Em Bằng Tên Anh</span>
+                    <p class="movie-list-item-desc">Mối tình hè lãng mạn, say đắm giữa Elio – chàng trai 17 tuổi và Oliver – sinh viên thực tập tại Ý, để lại dư vị ngọt ngào và tiếc nuối của mối tình đầu.</p>
+                    <button class="movie-list-item-button">Watch</button>
+                   </a>   </div>
+                   <div class="movie-list-item"data-genre="tinhcam">  
+                    <a href="theloai.html?genre=tinhcam" style="text-decoration: none; color: inherit;">
+                    <img class="movie-list-item-img" src="/image/tc8.webp" alt="Bản tango cuối cùng ở Paris">
+                    <span class="movie-list-item-title">Bản tango cuối cùng ở Paris</span>
+                    <p class="movie-list-item-desc">Một bộ phim tâm lý gây tranh cãi, xoay quanh mối quan hệ mãnh liệt và đầy dục vọng giữa một người đàn ông trung niên và một cô gái trẻ xa lạ, nơi cả hai tìm đến nhau để trốn chạy nỗi cô đơn và mất mát trong cuộc sống.</p>
+                    <button class="movie-list-item-button">Watch</button>
+                   </a>   </div>
+                   <div class="movie-list-item"data-genre="tinhcam">  
+                    <a href="theloai.html?genre=tinhcam" style="text-decoration: none; color: inherit;">
+                    <img class="movie-list-item-img" src="/image/tc9.jpeg" alt="New Year Blues">
+                    <span class="movie-list-item-title">New Year Blues</span>
+                    <p class="movie-list-item-desc">Bốn cặp đôi với những câu chuyện tình yêu khác nhau, cùng tìm kiếm hy vọng và hạnh phúc mới trong những ngày cuối năm đầy cảm xúc.</p>
+                    <button class="movie-list-item-button">Watch</button>
+                   </a>   </div>
+                   <div class="movie-list-item"data-genre="tinhcam">  
+                    <a href="theloai.html?genre=tinhcam" style="text-decoration: none; color: inherit;">
+                    <img class="movie-list-item-img" src="/image/tc10.jpeg" alt="Tình người duyên ma">
+                    <span class="movie-list-item-title">Tình người duyên ma</span>
+                    <p class="movie-list-item-desc">Mak, một người lính trở về làng sau chiến tranh và sống hạnh phúc bên vợ Nak. Nhưng bạn bè anh bắt đầu nghi ngờ Nak đã chết và anh đang sống với… ma.</p>
+                    <button class="movie-list-item-button">Watch</button>
+                   </a>   </div>
+    </div>
+    </div>
+       <!--haịhuoc-->     
+       <div class="genre-group" data-genre="haihuoc">
+        <h2>PHIM HÀI</h2>
+       <div class="movie-list">
+        <div class="movie-list-item"data-genre="haihuoc">  
+            <a href="theloai.html?genre=haihuoc" style="text-decoration: none; color: inherit;">
+                            <img class="movie-list-item-img" src="/image/1s1.jpeg" alt="Siêu Lừa Gặp Siêu Lầy">
+                            <span class="movie-list-item-title">Siêu Lừa Gặp Siêu Lầy</span>
+                            <p class="movie-list-item-desc">Lừa đảo gặp lầy lội, kết quả là… không thể đoán trước.</p>
+                            <button class="movie-list-item-button">Watch</button>
+        </a>     </div>
+        <div class="movie-list-item" data-genre="haihuoc"> 
+            <a href="theloai.html?genre=haihuoc" style="text-decoration: none; color: inherit;">
+                            <img class="movie-list-item-img" src="/image/2s2.jpeg" alt="Đầu Gấu Đụng Đầu Đất">
+                            <span class="movie-list-item-title">Đầu Gấu Đụng Đầu Đất</span>
+                            <p class="movie-list-item-desc">Duy, một chàng trai "đầu gấu" với tính cách nóng nảy, gặp phải một loạt tình huống dở khóc dở cười khi va phải những người yếu đuối nhưng vô cùng thông minh. Trong hành trình từ một kẻ chuyên đi gây sự đến một người thay đổi, Duy phải học cách kiềm chế và đối diện với chính mình.</p>
+                            <button class="movie-list-item-button">Watch</button>
+            </a>      </div>
+        <div class="movie-list-item"data-genre="haihuoc">
+            <a href="theloai.html?genre=haihuoc" style="text-decoration: none; color: inherit;">
+                            <a href="theloai.html?genre=haihuoc" style="text-decoration: none; color: inherit;">   
+                            <img class="movie-list-item-img" src="/image/3a3.webp" alt="Thần Bài">
+                            <span class="movie-list-item-title">Thần Bài</span>
+                            <p class="movie-list-item-desc">Thần bài đã mất trí nhớ, nhưng có thể khôi phục danh tiếng?</p>
+                            <button class="movie-list-item-button">Watch</button>
+                            </a>         </div>
+        <div class="movie-list-item"data-genre="haihuoc">
+            <a href="theloai.html?genre=haihuoc" style="text-decoration: none; color: inherit;">
+                            <img class="movie-list-item-img" src="/image/7f7.jpeg" alt="Bỗng Dưng Trúng Số">
+                            <span class="movie-list-item-title">Bỗng Dưng Trúng Số</span>
+                            <p class="movie-list-item-desc">Một người đàn ông bình thường bỗng trúng số, khiến cuộc sống của anh thay đổi hoàn toàn. Tuy nhiên, anh phải đối mặt với những tình huống trớ trêu, những người bạn cũ và những quyết định khó khăn trong cuộc sống mới đầy tiền bạc và rắc rối.</p>
+                            <button class="movie-list-item-button">Watch</button>
+                            </a>        </div>
+        <div class="movie-list-item"data-genre="haihuoc"> 
+            <a href="theloai.html?genre=haihuoc" style="text-decoration: none; color: inherit;">             
+                            <img class="movie-list-item-img" src="/image/4f5.jpeg" alt="Cảnh sát tập sự">
+                            <span class="movie-list-item-title">Cảnh sát tập sự</span>
+                            <p class="movie-list-item-desc">Jang Sun-gyeol, một thanh niên không có kinh nghiệm, quyết định gia nhập lực lượng cảnh sát. Anh bắt đầu hành trình đầy thử thách, đối mặt với những tình huống khó khăn và dần dần học được những bài học quan trọng về lòng trung thực, tình bạn và sự hy sinh trong công việc.</p>
+                            <button class="movie-list-item-button">Watch</button>
+                            </a> </div>
+
+         <div class="movie-list-item"data-genre="haihuoc">
+            <a href="theloai.html?genre=haihuoc" style="text-decoration: none; color: inherit;"><\
+                            <img class="movie-list-item-img" src="/image/2s2s2.jpeg" alt="Nghề Siêu Khó">
+                            <span class="movie-list-item-title">Nghề Siêu Khó </span>
+                            <p class="movie-list-item-desc">Ba người đàn ông bình thường quyết định thử sức với những nghề nghiệp cực kỳ khó khăn và đầy thử thách. Từ nghề thợ xây đến những công việc nguy hiểm, họ phải vượt qua nỗi sợ, mệt mỏi và khó khăn để chứng minh bản thân. Dù không dễ dàng, họ học được nhiều bài học về sự kiên trì và tinh thần đồng đội.</p>                       
+                            <button class="movie-list-item-button">Watch</button>
+                        </div>
+         <div class="movie-list-item"data-genre="haihuoc">
+            <a href="theloai.html?genre=haihuoc" style="text-decoration: none; color: inherit;">
+                            <img class="movie-list-item-img" src="/image/d.jpeg" alt="Tuổi 20 – Twenty ">
+                            <span class="movie-list-item-title">Tuổi 20 – Twenty </span>
+                            <p class="movie-list-item-desc">Ba chàng trai tuổi 20, mỗi người đều có ước mơ và nỗi lo riêng, bắt đầu bước vào thế giới của những quyết định trưởng thành. Từ tình yêu đến công việc, họ phải đối mặt với những thử thách trong hành trình tìm kiếm bản thân. Phim là một câu chuyện về tình bạn, tuổi trẻ và những kỷ niệm khó quên.</p>
+                            <button class="movie-list-item-button">Watch</button>
+                            </a>    </div>
+         <div class="movie-list-item"data-genre="haihuoc">
+            <a href="theloai.html?genre=haihuoc" style="text-decoration: none; color: inherit;">
+                            <img class="movie-list-item-img" src="/image/hhc1.jpeg" alt="Sự cố hôn nhân ">
+                            <span class="movie-list-item-title">Sự cố hôn nhân </span>
+                            <p class="movie-list-item-desc">Cuộc ly hôn đầy cảm xúc giữa một đạo diễn sân khấu và vợ – một diễn viên, khi họ cố gắng chia tay trong êm đẹp nhưng lại bị cuốn vào cuộc chiến pháp lý căng thẳng.</p>
+                            <button class="movie-list-item-button">Watch</button>
+                            </a>    </div>
+         <div class="movie-list-item"data-genre="haihuoc">
+            <a href="theloai.html?genre=haihuoc" style="text-decoration: none; color: inherit;">
+                            <img class="movie-list-item-img" src="/image/hhc2.jpeg" alt="Zombie đại hạ giá">
+                            <span class="movie-list-item-title">Zombie đại hạ giá </span>
+                            <p class="movie-list-item-desc">Zombie Đại Hạ Giá là phim hài – kinh dị Việt Nam, xoay quanh một khu chợ bị tấn công bởi dịch zombie, nơi tiểu thương và người dân cùng nhau chống lại thây ma trong những tình huống dở khóc dở cười.</p>
+                            <button class="movie-list-item-button">Watch</button>
+                            </a>    </div>
+        <div class="movie-list-item"data-genre="haihuoc">
+            <a href="theloai.html?genre=haihuoc" style="text-decoration: none; color: inherit;">
+                            <img class="movie-list-item-img" src="/image/hhc3.jpeg" alt="Gái già lắm chiêu V ">
+                            <span class="movie-list-item-title">Gái già lắm chiêu V</span>
+                            <p class="movie-list-item-desc">ba chị em nhà họ Lý sống tại biệt thự Bạch Trà Viên xa hoa ở Huế. Khi chiếc phượng bào Phượng Hoàng tam vĩ – báu vật gia tộc – bị đánh cắp, những mâu thuẫn, tham vọng và bí mật gia đình dần được hé lộ, đẩy họ vào cuộc chiến đầy kịch tính giữa tình thân và quyền lực.</p>
+                            <button class="movie-list-item-button">Watch</button>
+                            </a>    </div>
+        <div class="movie-list-item"data-genre="haihuoc">
+            <a href="theloai.html?genre=haihuoc" style="text-decoration: none; color: inherit;">
+                            <img class="movie-list-item-img" src="/image/hhc4.jpeg" alt="Hải tặc ">
+                            <span class="movie-list-item-title">Hải tặc </span>
+                            <p class="movie-list-item-desc"> Thuyền trưởng Jack Sparrow cùng Will Turner hợp lực giải cứu Elizabeth khỏi tay bọn cướp biển bị nguyền rủa.</p>
+                            <button class="movie-list-item-button">Watch</button>
+                            </a>    </div>
+         <div class="movie-list-item"data-genre="haihuoc">
+            <a href="theloai.html?genre=haihuoc" style="text-decoration: none; color: inherit;">
+                                <img class="movie-list-item-img" src="/image/hhc6.jpeg" alt="Những gã trai hư ">
+                                <span class="movie-list-item-title">Những gã trai hư </span>
+                                <p class="movie-list-item-desc">Những Gã Trai Hư (Bad Boys) theo chân hai cảnh sát Miami – Mike và Marcus – vừa hài hước, vừa máu lửa, khi họ cùng nhau phá những vụ án nguy hiểm trong thế giới tội phạm ngầm.</p>
+                                <button class="movie-list-item-button">Watch</button>
+                                </a>    </div>
+         <div class="movie-list-item"data-genre="haihuoc">
+            <a href="theloai.html?genre=haihuoc" style="text-decoration: none; color: inherit;">
+                                    <img class="movie-list-item-img" src="/image/hhc7.jpeg" alt="Lệnh truy nã đỏ">
+                                    <span class="movie-list-item-title">Lệnh truy nã đỏ </span>
+                                    <p class="movie-list-item-desc">Đặc vụ FBI, một tên trộm nghệ thuật và một siêu tội phạm, bị cuốn vào trò chơi truy đuổi đầy bất ngờ trên toàn cầu.</p>
+                                    <button class="movie-list-item-button">Watch</button>
+                                    </a>    </div>
+         <div class="movie-list-item"data-genre="haihuoc">
+            <a href="theloai.html?genre=haihuoc" style="text-decoration: none; color: inherit;">
+                                        <img class="movie-list-item-img" src="/image/hhc5.jpeg" alt="Back in Action ">
+                                        <span class="movie-list-item-title">Back in Action </span>
+                                        <p class="movie-list-item-desc">Emily và Matt – cặp vợ chồng từng là điệp viên CIA, nay sống đời bình yên tại ngoại ô Atlanta cùng hai con. Khi danh tính bị lộ, họ buộc phải tái xuất giang hồ để bảo vệ gia đình, dẫn đến những tình huống dở khóc dở cười.</p>
+                                        <button class="movie-list-item-button">Watch</button>
+                                        </a>    </div>
+         <div class="movie-list-item"data-genre="haihuoc">
+            <a href="theloai.html?genre=haihuoc" style="text-decoration: none; color: inherit;">
+                                            <img class="movie-list-item-img" src="/image/hhc8.jpeg" alt="Wicked">
+                                            <span class="movie-list-item-title">Wicked </span>
+                                            <p class="movie-list-item-desc"> Tình bạn và sự chia rẽ giữa Elphaba – cô gái da xanh bị hiểu lầm, và Glinda – phù thủy nổi tiếng, trước khi trở thành hai phù thủy đối lập ở xứ Oz.</p>
+                                            <button class="movie-list-item-button">Watch</button>
+                                            </a>    </div>
+         <div class="movie-list-item"data-genre="haihuoc">
+            <a href="theloai.html?genre=haihuoc" style="text-decoration: none; color: inherit;">
+                                                <img class="movie-list-item-img" src="/image/hhc9.jpeg" alt="Siêu ngốc gặp nhau ">
+                                                <span class="movie-list-item-title"> Siêu ngốc gặp nhau </span>
+                                                <p class="movie-list-item-desc"> Hai người bạn ngốc nghếch Lloyd và Harry lên đường tìm con gái thất lạc, kéo theo loạt tình huống hài hước đến "khó đỡ".</p>
+                                                <button class="movie-list-item-button">Watch</button>
+                                                </a>    </div>
+         <div class="movie-list-item"data-genre="haihuoc">
+             <img class="movie-list-item-img" src="/image/hhc11.jpeg" alt="Ước Gì Được Nấy">
+            <span class="movie-list-item-title">Ước Gì Được Nấy </span>
+             <p class="movie-list-item-desc"> Neil Clarke – một giáo viên trung học bỗng có khả năng làm mọi điều anh muốn, do một nhóm người ngoài hành tinh trao tặng. Tuy nhiên, cách anh sử dụng quyền năng này sẽ quyết định số phận của cả nhân loại.</p>
+             <button class="movie-list-item-button">Watch</button>
+            </a>    </div>
+         <div class="movie-list-item"data-genre="haihuoc">
+                <img class="movie-list-item-img" src="/image/hhc12.jpeg" alt="Hành trình 2: Hòn đảo huyền bí">
+               <span class="movie-list-item-title">Hành trình 2: Hòn đảo huyền bí </span>
+                <p class="movie-list-item-desc"> Sean và cha dượng lên đường tìm ông nội mất tích trên một hòn đảo kỳ lạ đầy sinh vật khổng lồ và bí ẩn đang chìm dần.</p>
+                <button class="movie-list-item-button">Watch</button>
+               </a>    </div>
+       </div>
+       </div>
+                  <!--anime-->
+       <div class="genre-group" data-genre="anime">
+       <h2>ANIME</h2>
+       <div class="movie-list">
+         <div class="movie-list-item"data-genre="anime">
+            <a href="theloai.html?genre=anime" style="text-decoration: none; color: inherit;">
+                            <img class="movie-list-item-img" src="/image/4a4.jpeg" alt="Ponyo – cô bé người cá">
+                            <span class="movie-list-item-title">Ponyo – cô bé người cá</span>
+                            <p class="movie-list-item-desc">Ponyo trốn khỏi đại dương và kết bạn với cậu bé Sousuke trên đất liền. Tình bạn trong sáng của hai đứa trẻ vô tình làm rối loạn trật tự tự nhiên, và chỉ tình yêu thương thuần khiết mới có thể cứu lấy thế giới.</p>
+                            <button class="movie-list-item-button">Watch</button>
+                             </a>    </div>
+          <div class="movie-list-item" data-genre="anime"> 
+            <a href="theloai.html?genre=anime" style="text-decoration: none; color: inherit;">
+                            <img class="movie-list-item-img" src="/image/55a5.webp" alt="Khu rừng đom đóm">
+                            <span class="movie-list-item-title">Khu rừng đom đóm</span>
+                            <p class="movie-list-item-desc">Hotaru – một cô bé đi lạc trong rừng linh – gặp Gin, một chàng trai bí ẩn đeo mặt nạ. Gin là linh hồn không thể bị con người chạm vào: nếu ai đó chạm vào, anh sẽ tan biến. Mỗi năm, Hotaru trở lại thăm Gin, và tình cảm giữa họ lớn dần… trong nỗi buồn đẹp đẽ và mong manh.</p>
+                            <button class="movie-list-item-button">Watch</button>
+                            </a>      </div>
+         <div class="movie-list-item" data-genre="anime">         
+            <a href="theloai.html?genre=anime" style="text-decoration: none; color: inherit;">               
+                            <img class="movie-list-item-img" src="/image/7a7.jpeg" alt="Vùng Đất Linh Hồn">
+                            <span class="movie-list-item-title">Vùng Đất Linh Hồn</span>
+                            <p class="movie-list-item-desc">Chihiro – cô bé 10 tuổi – lạc vào thế giới linh hồn sau khi cha mẹ bị biến thành heo. Để cứu họ và trở về, cô phải làm việc tại nhà tắm công cộng của phù thủy Yubaba, nơi đầy rẫy những sinh vật kỳ lạ, thử thách và cả phép màu.</p>
+                            <button class="movie-list-item-button">Watch</button>
+                            </a>   </div>
+         <div class="movie-list-item"data-genre="anime">
+            <a href="theloai.html?genre=anime" style="text-decoration: none; color: inherit;">
+                            <img class="movie-list-item-img" src="/image/9â9.jpeg" alt="My Neighbor Totoro">
+                            <span class="movie-list-item-title">My Neighbor Totoro</span>
+                            <p class="movie-list-item-desc">Hai chị em Satsuki và Mei chuyển về vùng quê sống cùng cha, trong khi mẹ đang chữa bệnh ở bệnh viện. Tại đây, các em gặp Totoro – một sinh vật rừng khổng lồ, hiền lành và kỳ diệu. Totoro cùng những sinh vật dễ thương khác đã đưa hai cô bé vào thế giới diệu kỳ, đầy tình yêu thương và trí tưởng tượng.</p>
+                            <button class="movie-list-item-button">Watch</button>
+                        </div>
+        <div class="movie-list-item"data-genre="anime">
+            <a href="theloai.html?genre=anime" style="text-decoration: none; color: inherit;">
+                            <img class="movie-list-item-img" src="/image/1â1.jpeg" alt="Thế Giới Bí Mật Của Arrietty">
+                            <span class="movie-list-item-title">Thế Giới Bí Mật Của Arrietty</span>
+                            <p class="movie-list-item-desc">Một tình bạn kỳ lạ giữa hai thế giới: nhỏ bé và rộng lớn.</p>
+                            <button class="movie-list-item-button">Watch</button>
+                </a>        </div>
+        <div class="movie-list-item"data-genre="anime">
+            <a href="theloai.html?genre=anime" style="text-decoration: none; color: inherit;">
+                    <img class="movie-list-item-img" src="/image/a1.jpeg" alt="Hồi ức về Marnie">
+                    <span class="movie-list-item-title">Hồi ức về Marnie</span>
+                    <p class="movie-list-item-desc">Anna – cô bé trầm lặng kết bạn với Marnie bí ẩn tại vùng quê. Dần dần, Anna khám phá ra những bí mật gắn kết hai người qua ký ức và tình thân.</p>
+                    <button class="movie-list-item-button">Watch</button>
+        </a>        </div>     
+        <div class="movie-list-item"data-genre="anime">
+            <a href="theloai.html?genre=anime" style="text-decoration: none; color: inherit;">
+            <img class="movie-list-item-img" src="/image/a2.jpeg" alt="Ngọn Sóng Đại Dương">
+            <span class="movie-list-item-title">Ngọn Sóng Đại Dương</span>
+            <p class="movie-list-item-desc">Tình bạn và rung động tuổi học trò giữa hai nam sinh và cô gái mới chuyển trường, qua đó phản ánh tâm lý tuổi mới lớn một cách nhẹ nhàng và sâu lắng.</p>
+            <button class="movie-list-item-button">Watch</button>
+         </a>        </div>
+         <div class="movie-list-item"data-genre="anime">
+            <a href="theloai.html?genre=anime" style="text-decoration: none; color: inherit;">
+    <img class="movie-list-item-img" src="/image/a3.jpeg" alt="Khi muốn khóc, tôi đeo mặt nạ mèo">
+    <span class="movie-list-item-title">Khi muốn khóc, tôi đeo mặt nạ mèo</span>
+    <p class="movie-list-item-desc">Miyo – cô gái có thể hóa thành mèo để đến gần người mình thích. Nhưng dần dần, cô đối mặt với nguy cơ không thể trở lại làm người nếu tiếp tục từ bỏ bản thân.</p>
+    <button class="movie-list-item-button">Watch</button>
+           </a>        </div>
+         <div class="movie-list-item"data-genre="anime">
+            <a href="theloai.html?genre=anime" style="text-decoration: none; color: inherit;">
+    <img class="movie-list-item-img" src="/image/a4.jpeg" alt="Loài mèo trả ơn">
+    <span class="movie-list-item-title">Loài mèo trả ơn</span>
+    <p class="movie-list-item-desc">Haru – cô gái cứu một con mèo và bất ngờ được mời đến Vương quốc Mèo. Tại đây, cô vướng vào âm mưu kết hôn ép buộc và phải tìm cách quay lại thế giới loài người.</p>
+    <button class="movie-list-item-button">Watch</button>
+          </a>        </div>
+         <div class="movie-list-item"data-genre="anime">
+            <a href="theloai.html?genre=anime" style="text-decoration: none; color: inherit;">
+    <img class="movie-list-item-img" src="/image/a5.jpeg" alt="Dáng hình thanh âm">
+    <span class="movie-list-item-title">Dáng hình thanh âm</span>
+    <p class="movie-list-item-desc">Shoya – một cậu học sinh từng bắt nạt cô bạn khiếm thính Shoko. Nhiều năm sau, anh tìm cách chuộc lỗi và hàn gắn quá khứ, mở ra hành trình chữa lành và tha thứ.</p>
+    <button class="movie-list-item-button">Watch</button>
+         </a>        </div>
+         <div class="movie-list-item"data-genre="anime">
+            <a href="theloai.html?genre=anime" style="text-decoration: none; color: inherit;">
+    <img class="movie-list-item-img" src="/image/a7.jpeg" alt="Chú heo màu đỏ">
+    <span class="movie-list-item-title">Chú heo màu đỏ</span>
+    <p class="movie-list-item-desc"> Porco Rosso – phi công tài ba bị nguyền biến thành heo. Sống ẩn dật và làm thợ săn tiền thưởng, anh vướng vào những trận chiến trên không và mối tình dang dở giữa bầu trời Địa Trung Hải.</p>
+    <button class="movie-list-item-button">Watch</button>
+        </a>        </div>
+         <div class="movie-list-item"data-genre="anime">
+            <a href="theloai.html?genre=anime" style="text-decoration: none; color: inherit;">
+    <img class="movie-list-item-img" src="/image/a9.jpeg" alt="Khóa chặt cửa nào Suzume">
+    <span class="movie-list-item-title">Khóa chặt cửa nào Suzume</span>
+    <p class="movie-list-item-desc">Suzume – cô gái vô tình mở cánh cửa dẫn đến thảm họa siêu nhiên khắp Nhật Bản. Cùng chàng trai bí ẩn Souta, cô bước vào hành trình đóng lại những cánh cửa và hàn gắn những mất mát trong quá khứ.</p>
+    <button class="movie-list-item-button">Watch</button>
+        </a>        </div>
+         <div class="movie-list-item"data-genre="anime">
+            <a href="theloai.html?genre=anime" style="text-decoration: none; color: inherit;">
+    <img class="movie-list-item-img" src="/image/a11.webp" alt="Dịch vụ giao hàng của phù thủy Kiki">
+    <span class="movie-list-item-title">Dịch vụ giao hàng của phù thủy Kiki</span>
+    <p class="movie-list-item-desc"> Kiki – cô phù thủy trẻ rời nhà để rèn luyện và lập nghiệp. Với cây chổi bay và chú mèo đen Jiji, Kiki mở dịch vụ giao hàng và dần trưởng thành qua những thử thách đầu đời.</p>
+    <button class="movie-list-item-button">Watch</button>
+        </a>        </div>
+        <div class="movie-list-item"data-genre="anime">
+            <a href="theloai.html?genre=anime" style="text-decoration: none; color: inherit;">
+        <img class="movie-list-item-img" src="/image/a12.jpeg" alt="Ngọn đồi hoa hồng anh">
+        <span class="movie-list-item-title">Ngọn đồi hoa hồng anh</span>
+        <p class="movie-list-item-desc"> Umi và Shun – hai học sinh trung học cùng nhau bảo vệ ngôi nhà câu lạc bộ cũ khỏi bị phá bỏ. Trong hành trình ấy, họ dần phát hiện những bí mật về quá khứ gia đình và tình cảm dành cho nhau.</p>
+        <button class="movie-list-item-button">Watch</button>
+            </a>        </div>
+            <div class="movie-list-item"data-genre="anime">
+                <a href="theloai.html?genre=anime" style="text-decoration: none; color: inherit;">
+                <img class="movie-list-item-img" src="/image/a13.jpeg" alt="Lời thì thầm của trái tim">
+                <span class="movie-list-item-title">Lời thì thầm của trái tim</span>
+                <p class="movie-list-item-desc"> Shizuku– cô nữ sinh yêu thích đọc sách, tình cờ gặp Seiji – chàng trai đam mê làm đàn violin. Từ đó, họ cùng nhau theo đuổi ước mơ và khám phá ý nghĩa của tình yêu tuổi học trò.</p>
+                <button class="movie-list-item-button">Watch</button>
+                    </a>        </div>
+            <div class="movie-list-item"data-genre="anime">
+                <a href="theloai.html?genre=anime" style="text-decoration: none; color: inherit;">
+                        <img class="movie-list-item-img" src="/image/a14.jpeg" alt="Chỉ còn là hôm qua">
+                        <span class="movie-list-item-title">Chỉ còn là hôm qua</span>
+                        <p class="movie-list-item-desc">Taeko – phụ nữ thành thị 27 tuổi trở về quê để tìm lại chính mình. Trong chuyến đi, cô hồi tưởng tuổi thơ và dần nhận ra điều mình thật sự khao khát trong cuộc sống hiện tại.</p>
+                        <button class="movie-list-item-button">Watch</button>
+                            </a>        </div>
+            <div class="movie-list-item"data-genre="anime">
+                <a href="theloai.html?genre=anime" style="text-decoration: none; color: inherit;">
+                                <img class="movie-list-item-img" src="/image/a15.jpeg" alt="NiNoKuni">
+                                <span class="movie-list-item-title">NiNoKuni</span>
+                                <p class="movie-list-item-desc">Hai học sinh trung học bị cuốn vào thế giới phép thuật Ninokuni. Tại đây, họ phải chiến đấu để bảo vệ người bạn thân đang gặp nguy hiểm, đồng thời đối mặt với những lựa chọn sinh tử giữa hai thế giới.</p>
+                                <button class="movie-list-item-button">Watch</button>
+                                    </a>        </div>
+             <div class="movie-list-item"data-genre="anime">
+                <a href="theloai.html?genre=anime" style="text-decoration: none; color: inherit;">
+                                        <img class="movie-list-item-img" src="/image/a16.jpeg" alt="Sol Levante">
+                                        <span class="movie-list-item-title">Sol Levante</span>
+                                        <p class="movie-list-item-desc"> Chuyện phim theo chân một nữ chiến binh phiêu lưu qua thế giới siêu nhiên, chiến đấu với thế lực kỳ bí để giành lấy thứ mình khao khát. Phim gây ấn tượng mạnh với hình ảnh vẽ tay 4K sống động và đầy sáng tạo.</p>
+                                        <button class="movie-list-item-button">Watch</button>
+                                            </a>        </div>
+
+       </div>    
+       </div>    
+
+</body>
+<script src="theloai.js"></script>
+</html>
