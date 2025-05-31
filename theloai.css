@@ -363,3 +363,417 @@ header .menu{
   background-color: #3aa700;
   transform: scale(1.05);
 }
+/* Chỉ áp dụng khi màn hình nhỏ hơn 768px (điện thoại, iPad) */
+@media screen and (max-width: 768px) {
+  header {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    background: rgba(0, 0, 0, 0.7); /* nền mờ giúp chữ nổi lên */
+    z-index: 1000;
+    padding: 10px;
+    flex-direction: column;
+  }
+
+  .menu-container {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+  }
+
+  .menu-list {
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+    margin: 10px 0;
+  }
+
+  .search-wrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 10px;
+  }
+
+  #searchInput {
+    display: block !important;
+    width: 90%;
+    padding: 8px;
+    margin-left: 10px;
+  }
+
+  .slider .content {
+    bottom: 10%;
+    left: 5%;
+    max-width: 90%;
+  }
+
+  .slider .content h2 {
+    font-size: 20px;
+  }
+
+  .slider .content p {
+    font-size: 14px;
+  }
+
+  .watch-btn {
+    font-size: 14px;
+    padding: 8px 16px;
+  }
+}
+/* Chỉ áp dụng khi màn hình nhỏ hơn 768px (điện thoại, iPad) */
+@media screen and (max-width: 768px) {
+  header {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    background: rgba(0, 0, 0, 0.7); /* nền mờ giúp chữ nổi lên */
+    z-index: 1000;
+    padding: 10px;
+    flex-direction: column;
+  }
+
+  .menu-container {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+  }
+
+  .menu-list {
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+    margin: 10px 0;
+  }
+
+  .search-wrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 10px;
+  }
+
+  #searchInput {
+    display: block !important;
+    width: 90%;
+    padding: 8px;
+    margin-left: 10px;
+  }
+
+  .slider .content {
+    bottom: 10%;
+    left: 5%;
+    max-width: 90%;
+  }
+
+  .slider .content h2 {
+    font-size: 20px;
+  }
+
+  .slider .content p {
+    font-size: 14px;
+  }
+
+  .watch-btn {
+    font-size: 14px;
+    padding: 8px 16px;
+  }
+}
+/* Chỉ áp dụng khi màn hình nhỏ hơn 768px (điện thoại, iPad) */
+@media screen and (max-width: 768px) {
+  header {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    background: rgba(0, 0, 0, 0.7); /* nền mờ giúp chữ nổi lên */
+    z-index: 1000;
+    padding: 10px;
+    flex-direction: column;
+  }
+
+  .menu-container {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+  }
+
+  .menu-list {
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+    margin: 10px 0;
+  }
+
+  .search-wrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 10px;
+  }
+
+  #searchInput {
+    display: block !important;
+    width: 90%;
+    padding: 8px;
+    margin-left: 10px;
+  }
+
+  .slider .content {
+    bottom: 10%;
+    left: 5%;
+    max-width: 90%;
+  }
+
+  .slider .content h2 {
+    font-size: 20px;
+  }
+
+  .slider .content p {
+    font-size: 14px;
+  }
+
+  .watch-btn {
+    font-size: 14px;
+    padding: 8px 16px;
+  }
+}
+/* Chỉ áp dụng khi màn hình nhỏ hơn 768px (điện thoại, iPad) */
+@media screen and (max-width: 768px) {
+  header {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    background: rgba(0, 0, 0, 0.7); /* nền mờ giúp chữ nổi lên */
+    z-index: 1000;
+    padding: 10px;
+    flex-direction: column;
+  }
+
+  .menu-container {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+  }
+
+  .menu-list {
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+    margin: 10px 0;
+  }
+
+  .search-wrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 10px;
+  }
+
+  #searchInput {
+    display: block !important;
+    width: 90%;
+    padding: 8px;
+    margin-left: 10px;
+  }
+
+  .slider .content {
+    bottom: 10%;
+    left: 5%;
+    max-width: 90%;
+  }
+
+  .slider .content h2 {
+    font-size: 20px;
+  }
+
+  .slider .content p {
+    font-size: 14px;
+  }
+
+  .watch-btn {
+    font-size: 14px;
+    padding: 8px 16px;
+  }
+}
+/* Chỉ áp dụng khi màn hình nhỏ hơn 768px (điện thoại, iPad) */
+@media screen and (max-width: 768px) {
+  header {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    background: rgba(0, 0, 0, 0.7); /* nền mờ giúp chữ nổi lên */
+    z-index: 1000;
+    padding: 10px;
+    flex-direction: column;
+  }
+
+  .menu-container {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+  }
+
+  .menu-list {
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+    margin: 10px 0;
+  }
+
+  .search-wrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 10px;
+  }
+
+  #searchInput {
+    display: block !important;
+    width: 90%;
+    padding: 8px;
+    margin-left: 10px;
+  }
+
+  .slider .content {
+    bottom: 10%;
+    left: 5%;
+    max-width: 90%;
+  }
+
+  .slider .content h2 {
+    font-size: 20px;
+  }
+
+  .slider .content p {
+    font-size: 14px;
+  }
+
+  .watch-btn {
+    font-size: 14px;
+    padding: 8px 16px;
+  }
+}
+/* Chỉ áp dụng khi màn hình nhỏ hơn 768px (điện thoại, iPad) */
+@media screen and (max-width: 768px) {
+  header {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    background: rgba(0, 0, 0, 0.7); /* nền mờ giúp chữ nổi lên */
+    z-index: 1000;
+    padding: 10px;
+    flex-direction: column;
+  }
+
+  .menu-container {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+  }
+
+  .menu-list {
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+    margin: 10px 0;
+  }
+
+  .search-wrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 10px;
+  }
+
+  #searchInput {
+    display: block !important;
+    width: 90%;
+    padding: 8px;
+    margin-left: 10px;
+  }
+
+  .slider .content {
+    bottom: 10%;
+    left: 5%;
+    max-width: 90%;
+  }
+
+  .slider .content h2 {
+    font-size: 20px;
+  }
+
+  .slider .content p {
+    font-size: 14px;
+  }
+
+  .watch-btn {
+    font-size: 14px;
+    padding: 8px 16px;
+  }
+}
+/* Chỉ áp dụng khi màn hình nhỏ hơn 768px (điện thoại, iPad) */
+@media screen and (max-width: 768px) {
+  header {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    background: rgba(0, 0, 0, 0.7); /* nền mờ giúp chữ nổi lên */
+    z-index: 1000;
+    padding: 10px;
+    flex-direction: column;
+  }
+
+  .menu-container {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+  }
+
+  .menu-list {
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+    margin: 10px 0;
+  }
+
+  .search-wrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 10px;
+  }
+
+  #searchInput {
+    display: block !important;
+    width: 90%;
+    padding: 8px;
+    margin-left: 10px;
+  }
+
+  .slider .content {
+    bottom: 10%;
+    left: 5%;
+    max-width: 90%;
+  }
+
+  .slider .content h2 {
+    font-size: 20px;
+  }
+
+  .slider .content p {
+    font-size: 14px;
+  }
+
+  .watch-btn {
+    font-size: 14px;
+    padding: 8px 16px;
+  }
+}
+
